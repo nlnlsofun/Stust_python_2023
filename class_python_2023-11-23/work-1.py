@@ -5,7 +5,6 @@ class Employee:
         self.emp_id = emp_id
         self.emp_salary = emp_salary
         self.emp_department = emp_department
-
     # 計算員工薪水的方法，根據工作小時數計算可能的加班薪水
     def calculate_emp_salary(self, hours_worked):
         base_salary = self.emp_salary
@@ -16,18 +15,15 @@ class Employee:
         else:
             total_salary = base_salary
         return total_salary
-
     # 分配員工部門的方法
     def emp_assign_department(self, new_department):
         self.emp_department = new_department
-
     # 印出員工詳細資訊的方法
     def print_employee_details(self):
         print(f"Employee ID: {self.emp_id}")
         print(f"Employee Name: {self.emp_name}")
         print(f"Employee Salary: {self.emp_salary}")
         print(f"Employee Department: {self.emp_department}")
-
 # 樣本員工資料
 employees_data = [
     ("ADAMS", "E7876", 50000, "ACCOUNTING"),
@@ -35,10 +31,8 @@ employees_data = [
     ("MARTIN", "E7900", 50000, "SALES"),
     ("SMITH", "E7698", 55000, "OPERATIONS"),
 ]
-
 # 創建 Employee 實例
 employees = [Employee(*data) for data in employees_data]
-
 # 使用方法
 for emp in employees:
     emp.print_employee_details()
