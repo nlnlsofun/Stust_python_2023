@@ -1,13 +1,13 @@
-class BeverageShop:
-    def __init__(self, employee_name, years_of_service, working_hours):
+class Employee:
+    def __init__(self, name, years_of_service, working_hours):
         # 員工屬性
-        self.employee_name = employee_name
+        self.name = name
         self.years_of_service = years_of_service
         self.working_hours = working_hours
 
     def query_name(self):
         # 查詢員工姓名
-        return self.employee_name
+        return self.name
 
     def query_years_of_service(self):
         # 查詢員工年資
@@ -49,7 +49,7 @@ class HotBeverage:
 
 
 # 建立一個飲料店員工物件
-employee1 = BeverageShop("小明", 2, 160)
+employee1 = Employee("小明", 2, 160)
 
 # 查詢員工資訊
 print(f"員工姓名: {employee1.query_name()}")
@@ -67,3 +67,12 @@ employee1.increase_years_of_service(1)
 # 查詢增加後的資訊
 print(f"員工工作時數增加後: {employee1.query_working_hours()} 小時")
 print(f"員工年資增加後: {employee1.query_years_of_service()} 年")
+
+# 建立一個冷飲物件
+cold_drink = ColdBeverage("檸檬紅茶", "半冰", "正常甜", 50)
+
+# 顯示冷飲資訊
+print(f"冷飲名稱: {cold_drink.name}")
+print(f"冰量: {cold_drink.ice_amount}")
+print(f"甜度: {cold_drink.sweetness_level}")
+print(f"價格: {cold_drink.price} 元")
